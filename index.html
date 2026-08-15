@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Status do Servidor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div>
+        <p class="eyebrow">STATUS PAGE</p>
+        <h1>Meu Servidor</h1>
+        <p class="subtitle">Monitoramento dos serviços em tempo real</p>
+      </div>
+      <div class="overall"><span class="dot"></span> Todos os sistemas operacionais</div>
+    </header>
+
+    <section class="card">
+      <div class="card-title">
+        <div>
+          <h2>Serviços</h2>
+          <p>Estado atual dos serviços</p>
+        </div>
+        <span id="last-update">Atualizando...</span>
+      </div>
+
+      <div class="service">
+        <div class="service-name"><span class="dot"></span><div><strong>Servidor principal</strong><small>Servidor Linux</small></div></div>
+        <strong class="online">Online</strong>
+      </div>
+      <div class="service">
+        <div class="service-name"><span class="dot"></span><div><strong>Web</strong><small>HTTP / HTTPS</small></div></div>
+        <strong class="online">Online</strong>
+      </div>
+      <div class="service">
+        <div class="service-name"><span class="dot"></span><div><strong>SSH</strong><small>Acesso remoto</small></div></div>
+        <strong class="online">Online</strong>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat card"><span>CPU</span><strong id="cpu">--%</strong><small>Uso atual</small></div>
+      <div class="stat card"><span>RAM</span><strong id="ram">--%</strong><small>Uso atual</small></div>
+      <div class="stat card"><span>DISCO</span><strong id="disk">--%</strong><small>Uso atual</small></div>
+      <div class="stat card"><span>UPTIME</span><strong>99,9%</strong><small>Últimos 30 dias</small></div>
+    </section>
+
+    <section class="card">
+      <div class="card-title">
+        <div><h2>Disponibilidade</h2><p>Histórico dos últimos dias</p></div>
+      </div>
+      <div class="bars" id="bars"></div>
+      <div class="legend"><span><i class="ok"></i> Operacional</span><span><i class="warn"></i> Instabilidade</span></div>
+    </section>
+
+    <footer>Última verificação: <span id="clock">--:--:--</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
